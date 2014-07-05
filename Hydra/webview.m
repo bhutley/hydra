@@ -131,7 +131,7 @@ static int webview_setlevel(lua_State* L) {
     PHWebViewController* wc = get_window_controller(L, 1);
     
     NSInteger level = lua_tonumber(L, 2);
-    NSWindowCollectionBehavior coBehave = NSWindowAnimationBehaviorDefault;
+    NSWindowCollectionBehavior coBehave = NSWindowCollectionBehaviorDefault;
     switch (level) {
         case -1: level = kCGDesktopIconWindowLevel + 1; coBehave = NSWindowCollectionBehaviorStationary; break;
         case  0: level = NSNormalWindowLevel; break;
